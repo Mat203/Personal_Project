@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link href="./css/styles.css" rel="stylesheet" />
+  <title>Make an order</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner container">
+          <nav class="header-nav">
+            <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
+            <button type="button" class="header-hamburger">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-hamburger"></use>
+              </svg>
+            </button>
+    
+            <ul class="header-list">
+              <li>
+                <a class="header-menu" href="index.html">Discover</a>
+              </li>
+              <li>
+                <a class="header-menu" href="index3.html">Menu</a>
+              </li>
+              <li>
+                <a class="header-menu header-studio" href="">Make an order</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address">
+            <ul class="address-list">
+              <li><a class="address-contacts" href="mailto:info@devstudio.com">info@bizbite.com</a></li>
+              <li><a class="address-contacts" href="tel:+110001111111">+1 (050) 123-45-67</a></li>
+            </ul>
+          </address>
+        </div>
+      </header>
+      <section>
+        <form>
+            
+            <label for="name">Name*:</label>
+            <input type="text" id="name" class="inputline"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="inputline"><br>
+
+            <label for="phone">Phone*:</label>
+            <input type="tel" id="phone" class="inputline"><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" class="inputline"><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" class="inputline"><br>
+
+        </form>
+      </section>
+</body>

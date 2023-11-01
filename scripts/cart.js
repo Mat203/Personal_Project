@@ -1,3 +1,11 @@
+var menu = [
+    { name: 'Product 1', price: 10, image: 'images/menu-main/bigness_lunch.jpg', category: 'Seasonal' },
+    { name: 'Product 2', price: 20, image: 'images/menu-main/business-burger.jpg', category: 'Fruits' },
+    { name: 'Product 3', price: 30, image: 'images/menu-main/bigness_lunch.jpg', category: 'Drinks' },
+    { name: 'Product 4', price: 15, image: 'images/menu-main/business-burger.jpg', category: 'Snacks' }
+];
+
+
 window.onload = function () {
     cart = JSON.parse(localStorage.getItem('cart')) || {};
     displayCart();
@@ -42,5 +50,14 @@ function displayCart() {
     } else {
         console.error('Total sum element not found.');
     }
+}
+
+function getItemPriceByName(name) {
+    for (var i = 0; i < menu.length; i++) {
+        if (menu[i].name === name) {
+            return menu[i].price;
+        }
+    }
+    return 0;
 }
 

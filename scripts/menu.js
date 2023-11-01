@@ -52,7 +52,7 @@ function displayCart() {
     var cartList = document.getElementById('cart').getElementsByTagName('ul')[0];
     cartList.innerHTML = '';
 
-    var totalSum = 0; // Initialize the total sum to zero
+    var totalSum = 0;
 
     for (var name in cart) {
         var item = document.createElement('li');
@@ -61,18 +61,22 @@ function displayCart() {
             '<div class="main-menu-info">' +
                 '<h3 class="main-menu-subtitle">' + name + '</h3>' +
                 '<p class="main-menu-text">Quantity: ' + cart[name] + '</p>' +
-                '<button onclick="removeFromCart(\'' + name + '\')">Remove from cart</button>' +
+                '<button onclick="removeFromCart(\'' + name + '\')" class="remove-button">Remove from cart</button>' +
             '</div>';
         cartList.appendChild(item);
 
-        // Calculate the total sum for each item in the cart
         totalSum += cart[name] * getItemPriceByName(name);
     }
 
-    // Display the total sum at the bottom of the cart
     var totalSumElement = document.getElementById('total-sum');
-    totalSumElement.textContent = 'Total: $' + totalSum.toFixed(2);
+    
+    if (totalSum === 0) {
+        totalSumElement.textContent = "Your cart is empty. Come on, let's buy something!";
+    } else {
+        totalSumElement.textContent = 'Total: $' + totalSum.toFixed(2);
+    }
 }
+
 
 function getItemPriceByName(name) {
     for (var i = 0; i < menu.length; i++) {

@@ -38,14 +38,27 @@
       </nav>
       <address class="address">
         <ul class="address-list">
-          <li><a class="address-contacts" href="mailto:support@bizbite.com">support@bizbite.com</a></li>
-          <li><a class="address-contacts" href="tel:+380501234567">+38 (050) 123-45-67</a></li>
+          <li class="address-list"><button onclick="toggleCart()" class="button">Show Cart</button></li>
         </ul>
       </address>
     </div>
   </header>
 
   <main>
+    <div id="site-overlay" style="display: none;"></div>
+    <section id="cart" class="main-menu" style="display: none;">
+      <div class="container">
+        <div id="cart-header">
+          <button id="close-cart-button" class="close-button" onclick="toggleCart()">&#10006;</button>
+          <h2>Your Cart:</h2>
+        </div>
+        <ul class="main-menu-list">
+        </ul>
+        <div id="total-sum">Total: $0.00</div>
+      </div>
+    </section>
+  
+
     <section class="bg">
       <div class="container">
         <h1 class="bg-title">Business Lunch Always At Your Touch!</h1>
@@ -210,8 +223,8 @@
           </li>
           <li class="main-menu-item" id="button-item">
             <a href="index3.html">
-            <button class="button menu-button" type="button">Find out more</button>
-          </a>
+              <button class="button menu-button" type="button">Find out more</button>
+            </a>
           </li>
         </ul>
       </div>
@@ -312,7 +325,9 @@
       </li>
     </ul>
   </div>
+  <script src="scripts/menu.js"></script>
   <script src="scripts/goroscope.js"></script>
+
 </body>
 
 </html>

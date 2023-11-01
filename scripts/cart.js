@@ -24,7 +24,6 @@ function displayCart() {
 
     var totalSum = 0;
 
-    console.log('cart:', cart);
 
     for (var name in cart) {
         var item = document.createElement('li');
@@ -61,3 +60,12 @@ function getItemPriceByName(name) {
     return 0;
 }
 
+function removeFromCart(name) {
+    if (cart[name] > 1) {
+        cart[name]--;
+    } else {
+        delete cart[name];
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+}

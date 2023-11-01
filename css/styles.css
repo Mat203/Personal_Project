@@ -675,11 +675,82 @@ input[type="submit"]:active {
   margin: 0 0;
 }
 
+.remove-button {
+  background-color: white; /* Белый фон */
+  color: #f44336; /* Красный текст */
+  border: 2px solid #f44336; /* Красная рамка */
+  cursor: pointer; /* Изменить курсор на указатель при наведении */
+  padding: 15px 32px; /* Добавить отступы */
+  text-align: center; /* Выровнять текст по центру */
+  text-decoration: none; /* Убрать подчеркивание */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Добавить анимацию при наведении */
+}
+
+.remove-button:hover {
+  background-color: #f44336; /* Красный фон при наведении */
+  color: white; /* Белый текст при наведении */
+}
+
+
+
 /* Order Condirmation */
 
 .order-confirm-container {
   padding: 3%;
 }
+
+#confirm-button {
+  background-color: #31d0aa;
+  width: 100%;
+}
+
+#confirm-button:hover {
+  background-color: #087c61;
+  width: 100%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width:50%;
+   transition: transform .3s ease-in-out; 
+}
+
+
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input:invalid {
+  border: 2px solid rgb(255, 5, 5);
+}
+
 
 /* Mobile */
 

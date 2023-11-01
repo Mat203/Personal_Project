@@ -75,13 +75,12 @@ function displayCart() {
 }
 
 function getItemPriceByName(name) {
-    // Function to retrieve the price of an item by its name from the menu array
     for (var i = 0; i < menu.length; i++) {
         if (menu[i].name === name) {
             return menu[i].price;
         }
     }
-    return 0; // Default to 0 if the item is not found
+    return 0;
 }
 
 

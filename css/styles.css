@@ -675,6 +675,11 @@ input[type="submit"]:active {
   margin: 0 0;
 }
 
+/* Order Condirmation */
+
+.order-confirm-container {
+  padding: 3%;
+}
 
 /* Mobile */
 

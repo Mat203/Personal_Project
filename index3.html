@@ -14,45 +14,67 @@
   <link href="./css/styles.css" rel="stylesheet" />
   <title>Make an order</title>
 </head>
+
 <body>
-    <header class="header">
-        <div class="header-inner container">
-          <nav class="header-nav">
-            <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
-            <button type="button" class="header-hamburger">
-              <svg width="24" height="24">
-                <use href="./images/icons.svg#icon-hamburger"></use>
-              </svg>
-            </button>
-    
-            <ul class="header-list">
-              <li>
-                <a class="header-menu" href="index.html">Discover</a>
-              </li>
-              <li>
-                <a class="header-menu header-studio" href="">Menu</a>
-              </li>
-              <li>
-                <a class="header-menu" href="index2.html">Make an order</a>
-              </li>
-            </ul>
-          </nav>
-          <address class="address">
-            <ul class="address-list">
-              <li><a class="address-contacts" href="mailto:info@devstudio.com">info@bizbite.com</a></li>
-              <li><a class="address-contacts" href="tel:+110001111111">+1 (050) 123-45-67</a></li>
-            </ul>
-          </address>
-        </div>
-      </header>
-    <h1>Menu</h1>
-    <div id="menu">
+  <div id="site-overlay" style="display: none;"></div>
+  <header class="header">
+    <div class="header-inner container">
+      <nav class="header-nav">
+        <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
+        <button type="button" class="header-hamburger">
+          <button type="button" class="header-hamburger">
+            <img src="images/icons/hamburger.png" width="25" height="25" class="footer-icons">
+          </button>
+        </button>
+
+        <ul class="header-list">
+          <li>
+            <a class="header-menu" href="index.html">Discover</a>
+          </li>
+          <li>
+            <a class="header-menu header-studio" href="">Menu</a>
+          </li>
+          <li>
+            <a class="header-menu" href="index2.html">Make an order</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="address">
+        <ul class="address">
+          <li class="address-list"><button onclick="toggleCart()" class="button">Show Cart</button></li>
+          <li class="address-list"><button onclick="checkout()" class="button">Checkout</button></li>
+        </ul>
+      </address>
     </div>
-    <div id="cart">
+  </header>
+
+  <section class="main-menu">
+
+    <div class="container">
+      <h2 class="main-menu-title">Menu</h2>
+      <ul id="menu" class="main-menu-list">
+      </ul>
 
     </div>
-    <button onclick="checkout()">Checkout</button>
+  </section>
 
-    <script src="scripts/menu.js"></script>
+  <section id="cart" class="main-menu" style="display: none;">
+    <div class="container">
+      <div id="cart-header">
+        <button id="close-cart-button" class="close-button" onclick="toggleCart()">&#10006;</button>
+        <h2>Your Cart:</h2>
+      </div>
+      <ul class="main-menu-list">
+      </ul>
+      <p id="empty-cart-message" style="display: none;">Your cart is empty. Come on, let's buy something!</p>
+      <div id="total-sum">Total: $0.00</div> 
+    </div>
+  </section>
+
+
+  </section>
+
+  <script src="scripts/menu.js"></script>
 </body>
+
 </html>

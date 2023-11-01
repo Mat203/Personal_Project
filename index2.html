@@ -12,57 +12,76 @@
     rel="stylesheet">
 
   <link href="./css/styles.css" rel="stylesheet" />
-  <title>Make an order</title>
+  <title>Order Confirmation</title>
 </head>
+
 <body>
-    <header class="header">
-        <div class="header-inner container">
-          <nav class="header-nav">
-            <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
-            <button type="button" class="header-hamburger">
-              <svg width="24" height="24">
-                <use href="./images/icons.svg#icon-hamburger"></use>
-              </svg>
-            </button>
-    
-            <ul class="header-list">
-              <li>
-                <a class="header-menu" href="index.html">Discover</a>
-              </li>
-              <li>
-                <a class="header-menu" href="index3.html">Menu</a>
-              </li>
-              <li>
-                <a class="header-menu header-studio" href="">Make an order</a>
-              </li>
-            </ul>
-          </nav>
-          <address class="address">
-            <ul class="address-list">
-              <li><a class="address-contacts" href="mailto:info@devstudio.com">info@bizbite.com</a></li>
-              <li><a class="address-contacts" href="tel:+110001111111">+1 (050) 123-45-67</a></li>
-            </ul>
-          </address>
-        </div>
-      </header>
-      <section>
+  <header class="header">
+    <div class="header-inner container">
+      <nav class="header-nav">
+        <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
+        <button type="button" class="header-hamburger">
+          <button type="button" class="header-hamburger">
+            <img src="images/icons/hamburger.png" width="25" height="25" class="footer-icons">
+          </button>
+        </button>
+
+        <ul class="header-list">
+          <li>
+            <a class="header-menu" href="index.html">Discover</a>
+          </li>
+          <li>
+            <a class="header-menu" href="index3.html">Menu</a>
+          </li>
+          <li>
+            <a class="header-menu header-studio" href="">Make an order</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="address">
+        <ul class="address-list">
+          <li><a class="address-contacts" href="">info@bizbite.com</a></li>
+          <li><a class="address-contacts" href="">+38 (050) 123-45-67</a></li>
+        </ul>
+      </address>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="order-confirmation">
+      <section class="order-form">
         <form>
-            
-            <label for="name">Name*:</label>
-            <input type="text" id="name" class="inputline"><br>
+          <label for="name">Name*:</label>
+          <input type="text" id="name" class="inputline"><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" class="inputline"><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="inputline"><br>
 
-            <label for="phone">Phone*:</label>
-            <input type="tel" id="phone" class="inputline"><br>
+          <label for="phone">Phone*:</label>
+          <input type="tel" id="phone" class="inputline"><br>
 
-            <label for="date">Date:</label>
-            <input type="date" id="date" class="inputline"><br>
+          <label for="date">Date:</label>
+          <input type="date" id="date" class="inputline"><br>
 
-            <label for="time">Time:</label>
-            <input type="time" id="time" class="inputline"><br>
+          <label for="time">Time:</label>
+          <input type="time" id="time" class="inputline"><br>
 
+          <button type="submit">Confirm Order</button>
         </form>
       </section>
+
+      <section class="cart">
+        <h2>Your Cart:</h2>
+        <ul id="cart-items" class="main-menu-list">
+          <!-- Cart items go here -->
+        </ul>
+        <p id="empty-cart-message" style="display: none;">Your cart is empty. Come on, let's buy something!</p>
+        <div id="total-sum">Total: $0.00</div>
+    </section>
+    
+    </div>
+  </div>
+  <script src="scripts/cart.js"></script>
 </body>
+
+</html>

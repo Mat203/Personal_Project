@@ -1,4 +1,11 @@
-var date = '2023-10-10'; 
+var currentDate = new Date();
+
+var year = currentDate.getFullYear();
+var month = '10'
+var day = Math.floor(Math.random() * 30) + 1;
+
+var date = `${year}-${month}-${day}`;
+console.log(date);
 
 window.onload = function() {
     fetch('https://api.nasa.gov/planetary/apod?api_key=BORguzBPp7h4biUGGpMlHbvCmcyADsiqOinRJZoZ&date=' + date)

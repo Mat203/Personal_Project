@@ -244,26 +244,28 @@ h3 {
   display: flex;
   justify-content: center;
 }
+
 .food-goroscope h2 {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .food-goroscope p {
-  color:#2e2f42;
-  font-size: 18px; 
-  line-height: 1.5; 
+  color: #2e2f42;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .food-goroscope .goroscope-item {
   display: flex;
   gap: 20px;
-  align-items: center; 
+  align-items: center;
 }
 
 .food-goroscope img {
   width: 356px;
-  height: auto;
-  border-radius: 10px; 
+  max-height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .goroscope-info {
@@ -366,11 +368,11 @@ input[type="submit"]:active {
 
 /* Menu page form */
 .menu-page .menu-list li {
-  width: 200px; 
-  height: auto; 
-  margin: 10px; 
-  padding: 10px; 
-  box-sizing: border-box; 
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .menu-page .menu-list {
@@ -387,24 +389,29 @@ input[type="submit"]:active {
 }
 
 .menu-page .menu-img {
-    position: relative;
+  position: relative;
 }
 
 .menu-image {
   width: 356px;
   height: 356px;
 }
+
 .menu-page .menu-info {
-    padding: 16px;
-    border-top: none;
-    background-color: var(--light);
+  padding: 16px;
+  border-top: none;
+  background-color: var(--light);
 }
 
 .menu-page .menu-info button {
-    margin-top: 10px;
-    background-color: var(--primary-brand);
-    color: var(--white);
-    padding: 5px;
+  margin-top: 10px;
+  background-color: var(--primary-brand);
+  color: var(--white);
+  padding: 5px;
+}
+
+#button-item:hover {
+  box-shadow: 0px 1px 6px 0px rgb(255, 255, 255);
 }
 
 /* Footer */
@@ -614,6 +621,60 @@ input[type="submit"]:active {
   background-color: #31d0aa;
 }
 
+/* Cart overlay */
+
+#cart {
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: none;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+#site-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 100%;
+  padding: 5px;
+}
+
+#menu-button {
+  margin: 0 0;
+}
+
 
 /* Mobile */
 
@@ -643,7 +704,12 @@ input[type="submit"]:active {
   .footer-form {
     width: 300px;
   }
+
+  #button-item:hover {
+    box-shadow: 0px 1px 6px 0px rgb(255, 255, 255);
+  }
 }
+
 
 /* Tablet */
 
@@ -656,6 +722,10 @@ input[type="submit"]:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  #button-item:hover {
+    box-shadow: 0px 1px 6px 0px rgb(255, 255, 255);
   }
 
   .header-nav {
@@ -802,6 +872,10 @@ input[type="submit"]:active {
     padding: 0 15px;
   }
 
+  #button-item:hover {
+    box-shadow: 0px 1px 6px 0px rgb(255, 255, 255);
+  }
+
   .header-nav {
     gap: 76px;
   }
@@ -851,7 +925,8 @@ input[type="submit"]:active {
     box-shadow: none;
   }
 
-  .main-menu-item:hover {
+  .main-menu-item:hover,
+  #close-cart-button:hover {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
 

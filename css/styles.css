@@ -676,22 +676,22 @@ input[type="submit"]:active {
 }
 
 .remove-button {
-  background-color: white; /* Белый фон */
-  color: #f44336; /* Красный текст */
-  border: 2px solid #f44336; /* Красная рамка */
-  cursor: pointer; /* Изменить курсор на указатель при наведении */
-  padding: 15px 32px; /* Добавить отступы */
-  text-align: center; /* Выровнять текст по центру */
-  text-decoration: none; /* Убрать подчеркивание */
+  background-color: white; 
+  color: #f44336; 
+  border: 2px solid #f44336; 
+  cursor: pointer;
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.4s; /* Добавить анимацию при наведении */
+  transition-duration: 0.4s; 
 }
 
 .remove-button:hover {
-  background-color: #f44336; /* Красный фон при наведении */
-  color: white; /* Белый текст при наведении */
+  background-color: #f44336; 
+  color: white; 
 }
 
 

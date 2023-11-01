@@ -61,25 +61,28 @@
       <section class="order-form">
         <form id="order-form">
           <label for="name">Name*:</label>
-          <input type="text" id="name" class="inputline" required pattern="[A-Za-zА-Яа-яЁё\s]{1,}" title="Please enter a valid name"><br>
-        
+          <input type="text" id="name" class="inputline" required pattern="[A-Za-zА-Яа-яЁё\s]{1,}"
+            title="Please enter a valid name"><br>
+
           <label for="email">Email:</label>
-          <input type="email" id="email" class="inputline" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"><br>
-        
+          <input type="email" id="email" class="inputline" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"><br>
+
           <label for="phone">Phone*:</label>
-          <input type="tel" id="phone" class="inputline" placeholder="0501234567" title="Please enter a valid phone number in the format: +38 (050) 123-45-67"><br>
-        
+          <input type="tel" id="phone" class="inputline" placeholder="0501234567"
+            title="Please enter a valid phone number in the format: +38 (050) 123-45-67"><br>
+
           <label for="date">Date:</label>
           <input type="date" id="date" class="inputline"><br>
-        
+
           <label for="time">Time:</label>
           <input type="time" id="time" class="inputline"><br>
-        
+
           <div id="total-sum">Total: $0.00</div>
-        
+
           <button type="submit" class="button" id="confirm-button">Confirm Order</button>
         </form>
-        
+
       </section>
 
       <section class="cart">
@@ -87,6 +90,9 @@
         <ul id="cart-items" class="main-menu-list">
           <p id="empty-cart-message" style="display: none;">Your cart is empty. Come on, let's buy something!</p>
         </ul>
+        <a href="index3.html">
+          <button class="button" id="below-order-button">Continue ordering</button>
+        </a>
       </section>
 
     </div>

@@ -32,7 +32,6 @@ function displayCart() {
             '<div class="main-menu-info">' +
             '<h3 class="main-menu-subtitle">' + name + '</h3>' +
             '<p class="main-menu-text">Quantity: ' + cart[name] + '</p>' +
-            '<button onclick="removeFromCart(\'' + name + '\')" class="remove-button">Remove from cart</button>' +
             '</div>';
         cartList.appendChild(item);
 

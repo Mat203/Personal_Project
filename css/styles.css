@@ -702,9 +702,14 @@ input[type="submit"]:active {
   padding: 3%;
 }
 
+#below-order-button {
+  margin-top: 3%;
+}
+
 #confirm-button {
   background-color: #31d0aa;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 #confirm-button:hover {

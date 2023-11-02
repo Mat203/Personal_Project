@@ -52,6 +52,7 @@ function removeFromCart(name) {
 
 function displayCart() {
     var cartList = document.getElementById('cart').getElementsByTagName('ul')[0];
+    var checkout_btn = document.getElementById('checkout-button');
     cartList.innerHTML = '';
 
     var totalSum = 0;
@@ -74,8 +75,10 @@ function displayCart() {
     
     if (totalSum === 0) {
         totalSumElement.textContent = "Your cart is empty. Come on, let's buy something!";
+        checkout_btn.style.display = "none";
     } else {
         totalSumElement.textContent = 'Total: $' + totalSum.toFixed(2);
+        checkout_btn.style.display = "fixed";
     }
 }
 

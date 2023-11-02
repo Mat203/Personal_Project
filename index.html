@@ -20,9 +20,6 @@
     <div class="header-inner container">
       <nav class="header-nav">
         <a class="header-logo" href="./index.html">Biz<span class="header-accent">Bite</span></a>
-        <button type="button" class="header-hamburger">
-          <img src="images/icons/hamburger.png" width="25" height="25" class="footer-icons">
-        </button>
 
         <ul class="header-list">
           <li>
@@ -58,7 +55,7 @@
         <div id="total-sum">Total: $0.00</div>
       </div>
     </section>
-  
+
 
     <section class="bg">
       <div class="container">
@@ -281,8 +278,51 @@
     </div>
   </footer>
 
+  <div class="mobile-menu-btn" onclick="openMenu()">&#9776;
+
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-nav">
+        <li>
+          <a class="mobile-item mobile-studio" href="">Discover</a>
+        </li>
+        <li>
+          <a class="mobile-item" href="">Menu</a>
+        </li>
+        <li>
+          <a class="mobile-item" href="">Make an order</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li class="address-list"><button onclick="toggleCart()" class="button">Show Cart</button></li>
+      </ul>
+
+      <ul class="mobile-icons">
+        <li class="mobile-icon">
+          <a href="">
+            <img src="images/icons/instagram.png" width="25" height="25" class="footer-icons">
+          </a>
+        </li>
+        <li class="mobile-icon">
+          <a href="">
+            <img src="images/icons/instagram.png" width="25" height="25" class="footer-icons">
+          </a>
+        </li>
+        <li class="mobile-icon">
+          <a href="">
+            <img src="images/icons/instagram.png" width="25" height="25" class="footer-icons">
+          </a>
+        </li>
+        <li class="mobile-icon">
+          <a href="">
+            <img src="images/icons/instagram.png" width="25" height="25" class="footer-icons">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="mobile-menu">
-    <button type="button">
+    <button type="button" id="button-mobile" onclick="openMenu()">
       <img src="images/icons/hamburger.png" width="25" height="25" class="footer-icons">
     </button>
 
@@ -299,8 +339,7 @@
     </ul>
 
     <ul class="mobile-contacts">
-      <li><a class="address-contacts" href="mailto:support@bizbite.com">support@bizbite.com</a></li>
-      <li><a class="address-contacts" href="tel:+380501234567">+38 (050) 123-45-67</a></li>
+      <li class="address-list"><button onclick="toggleCart()" class="button">Show Cart</button></li>
     </ul>
 
     <ul class="mobile-icons">
@@ -326,6 +365,11 @@
       </li>
     </ul>
   </div>
+  <script>
+    function openMenu() {
+      document.getElementById("mobile-menu").style.display = "flex";
+    }
+  </script>
   <script src="scripts/menu.js"></script>
   <script src="scripts/goroscope.js"></script>
 

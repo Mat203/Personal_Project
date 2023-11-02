@@ -549,22 +549,25 @@ input[type="submit"]:active {
 /* Mobile Menu */
 
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: var(--white);
-  padding: 72px 16px 40px;
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: flex-start; 
+  padding: 20px; 
 }
 
-.mobile-menu.is-open {
-  transform: translateX(0%);
+.mobile-menu a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
+
+
+
 
 
 .close-icon {
@@ -616,9 +619,8 @@ input[type="submit"]:active {
   width: 40px;
 }
 
-
-.mobile-link:focus {
-  background-color: #31d0aa;
+.mobile-menu-btn {
+  display: none;
 }
 
 /* Cart overlay */
@@ -676,22 +678,22 @@ input[type="submit"]:active {
 }
 
 .remove-button {
-  background-color: white; 
-  color: #f44336; 
-  border: 2px solid #f44336; 
+  background-color: white;
+  color: #f44336;
+  border: 2px solid #f44336;
   cursor: pointer;
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.4s; 
+  transition-duration: 0.4s;
 }
 
 .remove-button:hover {
-  background-color: #f44336; 
-  color: white; 
+  background-color: #f44336;
+  color: white;
 }
 
 
@@ -738,8 +740,8 @@ input[type="submit"]:active {
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width:50%;
-   transition: transform .3s ease-in-out; 
+  width: 50%;
+  transition: transform .3s ease-in-out;
 }
 
 
@@ -788,6 +790,17 @@ input:invalid {
 
   #button-item:hover {
     box-shadow: 0px 1px 6px 0px rgb(255, 255, 255);
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
   }
 }
 

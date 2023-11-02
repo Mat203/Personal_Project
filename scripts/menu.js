@@ -1,8 +1,10 @@
 var menu = [
-    { name: 'Product 1', price: 10, image: 'images/menu-main/bigness_lunch.jpg', category: 'Seasonal' },
-    { name: 'Product 2', price: 20, image: 'images/menu-main/business-burger.jpg', category: 'Fruits' },
-    { name: 'Product 3', price: 30, image: 'images/menu-main/bigness_lunch.jpg', category: 'Drinks' },
-    { name: 'Product 4', price: 15, image: 'images/menu-main/business-burger.jpg', category: 'Snacks' }
+    { name: 'BIGness lunch', price: 30, image: 'images/menu-main/bigness_lunch.jpg', category: 'Seasonal' },
+    { name: 'Business Burger', price: 10, image: 'images/menu-main/business-burger.jpg', category: 'Fruits' },
+    { name: 'Bread Basket', price: 15, image: 'images/menu-main/bread-basket.jpg', category: 'Drinks' },
+    { name: 'Vegan Box', price: 30, image: 'images/menu-main/vegan-box.jpg', category: 'Snacks' },
+    { name: 'Light Lunch', price: 25, image: 'images/menu-main/light-lunch.jpg', category: 'Snacks' },
+    { name: 'Business Pizza', price: 20, image: 'images/menu-main/business-pizza.jpg', category: 'Snacks' }
 ];
 
 var cart = {};
